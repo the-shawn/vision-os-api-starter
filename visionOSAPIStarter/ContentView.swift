@@ -21,9 +21,6 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Text(viewModel.dateString)
-                .font(.title)
-            
             Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
                 .toggleStyle(.button)
                 .padding(.top, 50)
