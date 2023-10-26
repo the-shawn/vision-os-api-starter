@@ -22,20 +22,20 @@ struct ContentView: View {
 
     var body: some View {
         VStack {
-            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
-                .toggleStyle(.button)
-                .padding(.top, 50)
+//            Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
+//                .toggleStyle(.button)
+//                .padding(.top, 50)
             
             Button("Take a photo") {
                 openWindow(id: "origin")
             }
             
-            Slider(value: $viewModel.sliderValue)
-                .padding(.horizontal, 80)
-                .padding(.top, 40)
-
-            Text("\(viewModel.sliderValue)")
-                .font(.title2)
+//            Slider(value: $viewModel.sliderValue)
+//                .padding(.horizontal, 80)
+//                .padding(.top, 40)
+//
+//            Text("\(viewModel.sliderValue)")
+//                .font(.title2)
         }
         .padding()
         .onChange(of: showImmersiveSpace) { _, newValue in
