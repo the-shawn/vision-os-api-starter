@@ -18,12 +18,17 @@ struct ContentView: View {
 
     @Environment(\.openImmersiveSpace) var openImmersiveSpace
     @Environment(\.dismissImmersiveSpace) var dismissImmersiveSpace
+    @Environment(\.openWindow) private var openWindow
 
     var body: some View {
         VStack {
             Toggle("Show Immersive Space", isOn: $showImmersiveSpace)
                 .toggleStyle(.button)
                 .padding(.top, 50)
+            
+            Button("Take a photo") {
+                openWindow(id: "origin")
+            }
             
             Slider(value: $viewModel.sliderValue)
                 .padding(.horizontal, 80)

@@ -16,6 +16,13 @@ struct visionOSAPIStarterApp: App {
         WindowGroup {
             ContentView(viewModel: viewModel)
         }
+        WindowGroup(id: "origin") {
+            OriginView()
+        }
+        WindowGroup(id: "render") {
+            RenderView()
+        }
+        .defaultSize(CGSize(width: 400, height: 500))
 
         ImmersiveSpace(id: "ImmersiveSpace") {
             ImmersiveView(viewModel: viewModel)
